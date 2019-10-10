@@ -1,5 +1,3 @@
-var $siteUri = $('meta[name="site-uri"]').attr('content');
-
 $(document).ready(function () {
 
 	function checkScroll() {
