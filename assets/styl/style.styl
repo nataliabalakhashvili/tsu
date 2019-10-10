@@ -1,0 +1,3417 @@
+@import "normalize"
+
+body
+    display flex
+    min-height 100vh
+    flex-direction column
+    
+main
+    flex 1 0 auto
+    background white
+    z-index 1
+    left 0
+@keyframes firstLine
+    0%
+        transform translateY(0) rotate(0)
+    50%
+        transform translateY(7px) rotate(0)
+    100%
+        transform translateY(7px) rotate(45deg)
+        
+@keyframes firstLineReverse
+    0%
+        transform translateY(7px) rotate(45deg)
+    50%
+        transform translateY(7px) rotate(0)
+    100%
+        transform translateY(0) rotate(0)
+        
+@keyframes lastLine
+    0%
+        transform translateY(0) rotate(0)
+    50%
+        transform translateY(-7px) rotate(0)
+    100%
+        transform translateY(-7px) rotate(-45deg)
+        
+@keyframes lastLineReverse
+    0%
+        transform translateY(-7px) rotate(-45deg)
+    50%
+        transform translateY(-7px) rotate(0)
+    100%
+        transform translateY(0) rotate(0)
+
+@keyframes arrowMove
+    0%
+        transform translateY(0)
+    50%
+        transform translateY(-7px)
+    100%
+        transform translateY(0)
+.all-text
+    font-family bpg_arial
+    font-size 14px
+    margin 20px 0
+    *
+        font-family bpg_arial
+        font-size 14px
+    li
+        list-style-type disc!important
+        margin-left 15px!important
+    img
+        width 100%
+        // margin 20px 0!important
+.owl-carousel 
+    touch-action manipulation
+.caret
+    background url(../img/arr.svg) no-repeat center center
+    background-size 60%
+    filter grayscale(100%)
+    width 20px
+    height 20px
+    z-index 1
+    font-size 0!important
+    top 2px
+    right 14px!important
+.pager-line
+    height 4px
+    width 100%
+    background blue
+    position fixed
+    z-index 1000   
+.logo
+    display block
+    margin 10px 0
+    +mq(600px)
+        padding 16px 0 10px
+    img
+        width 80px
+        +mq(600px)
+            width 50px
+    p
+        max-width 230px
+        font-size 11px   
+        margin-left 20px
+        margin-top 25px
+        color #006ab3
+        +mq(600px)
+            display none
+.search-btn
+    width 30px
+    height 30px
+    border none
+    margin-top 35px
+    background transparent url(../img/search.svg) no-repeat center center
+    background-size 85%
+.burger-bar
+    width 35px
+    height 35px
+    border none
+    margin 32px 18px 0 16px
+    background transparent url(../img/menu.svg) no-repeat center center
+    background-size 100%
+.languages
+    margin-top 37px
+    text-transform uppercase
+    display block
+    color rgba(darkgrey, 0.9)
+    font-size 18px
+.header
+    background white
+.main-cover
+    position relative
+    .image
+        image(560px)
+        +mq(800px)
+            padding-top 460px
+        &:before
+            content ''
+            position absolute
+            width 100%
+            height 100%
+            left 0
+            top 0
+            background rgba(blue, 0.5);
+        &:after
+            content ''
+            position absolute
+            width 100%
+            height 100%
+            left 0
+            top 0
+            // background rgba(231,56,39,0)
+            // background -moz-linear-gradient(top, rgba(231,56,39,0) 0%, rgba(166,82,99,0) 28%, rgba(0,148,253,1) 100%)
+            // background -webkit-gradient(left top, left bottom, color-stop(0%, rgba(231,56,39,0)), color-stop(28%, rgba(166,82,99,0)), color-stop(100%, rgba(0,148,253,1)))
+            // background -webkit-linear-gradient(top, rgba(231,56,39,0) 0%, rgba(166,82,99,0) 28%, rgba(0,148,253,1) 100%)
+            // background -o-linear-gradient(top, rgba(231,56,39,0) 0%, rgba(166,82,99,0) 28%, rgba(0,148,253,1) 100%)
+            // background -ms-linear-gradient(top, rgba(231,56,39,0) 0%, rgba(166,82,99,0) 28%, rgba(0,148,253,1) 100%)
+            // background linear-gradient(to bottom, rgba(231,56,39,0) 0%, rgba(166,82,99,0) 28%, rgba(0,148,253,1) 100%)
+    .owl-theme .owl-nav [class*=owl-]
+        padding 0
+        width 35px
+        height 35px
+        position absolute
+        right 20px
+        bottom 20px
+        border-radius 0
+        display flex 
+        align-items center
+        justify-content center
+        background transparent
+        border 4px solid orange
+        filter grayscale(100%)
+        margin 0
+        img
+            width 16px
+        +mq(1200px)
+            bottom 62px
+            right 100px
+        +mq(600px)
+            bottom 140px
+            right auto
+            left 70px
+    .owl-carousel .owl-nav .owl-prev
+        right 70px
+        +mq(1200px)
+            right 150px
+        +mq(600px)
+            right auto
+            left 20px
+.cover-text
+    width 100%
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    top 120px
+    .container
+        padding-left 120px
+        box-sizing border-box
+        +mq(1200px)
+            padding-left 74px
+        +mq(800px)
+            padding-left 20px
+        +mq(600px)
+            padding-left 5px
+    .title
+        font-size 62px
+        color white
+        max-width 300px
+        line-height 1
+        text-transform uppercase
+        +mq(992px)
+            font-size 32px
+        +mq(600px)
+            padding-left 5px
+        span
+            font-size 64px
+            color orange
+            +mq(992px)
+                font-size 34px
+    .text-body
+        font-size 16px
+        font-family bpg_normal
+        color white
+        line-height 1.4
+        margin-top 20px
+        padding-left 5px
+        max-width 505px
+        dots(66px, 3)
+
+.why-us
+    background grey url(../img/bg1.png)
+    background-size cover
+    width 560px
+    padding 50px 64px 67px
+    +mq(1200px)
+        width 100%
+        margin-top -25px
+    +mq(800px)
+        box-shadow 0 0 1px rgba(black, 0.12)
+        padding 30px 40px
+    +mq(600px)
+        box-shadow none
+        padding 40px 20px 20px
+        margin 0 -20px
+        width calc(100% + 40px)
+.main-title
+    font-size 22px
+    color textgrey
+    position relative
+    padding-bottom 6px
+    text-transform uppercase
+    margin-bottom 5px
+    display block
+    &.margin
+        margin-top 50px
+    &:after
+        content ''
+        position absolute
+        width 40px
+        height 4px
+        background orange
+        left 0
+        bottom 0
+    &.center-align
+        &:after
+            content ''
+            position absolute
+            width 40px
+            height 4px
+            background orange
+            left 50%
+            transform translateX(-50%)
+            bottom 0
+.achievement
+    margin-top 25px
+    display flex 
+    align-items center
+    .image
+        image(60px)
+        width 60px
+        background-size 70%
+        background-color orange
+    .title
+        width calc(100% - 80px)
+        margin-left 20px
+        line-height 1.3
+        dots(38px, 2)
+        height auto
+        padding-top 4px
+        max-height 38px
+        display block
+        color textgrey
+        transition 0.3s
+    &:hover
+        .title
+            opacity 0.8
+.why-us-left
+    width 460px
+    position relative
+    z-index 2
+    +mq(1200px)
+        width 100%
+.why-us-right
+    position relative
+    z-index 1
+    margin-top -130px
+    width calc(100% - 460px)
+    +mq(1200px)
+        margin-top 10px
+        width 100%
+    +mq(992px)
+        margin-top 40px
+    +mq(600px)
+        margin 40px -20px 0
+        width calc(100% + 40px)
+    .image
+        image(646px)
+        +mq(1200px)
+            padding-top 156px
+        &:after
+            content ''
+            position absolute
+            width calc(100% - 48px)
+            height calc(100% - 48px)
+            left 20px
+            top 20px
+            border 4px solid white
+            z-index 1
+        &:before
+            content ''
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
+            background rgba(black, 0.3)
+
+.for-students
+    position absolute
+    right 30px
+    bottom 40px
+    z-index 2
+    +mq(1200px)
+        right auto
+        left 65px
+    +mq(600px)
+        right auto
+        left 50%
+        transform translateX(-50%)!important
+    .img
+        width 30px
+        line-height 1
+        +mq(600px)
+            position absolute
+            left 10px
+        img
+            width 30px
+            line-height 1
+    p
+        width 210px
+        margin-left 20px
+        color white
+        font-size 28px
+        line-height 1.2
+        +mq(600px) 
+            padding-left 60px
+            margin-left 0
+            
+    &:hover
+        .img
+            img:first-child
+                animation arrowMove 1.2s infinite
+
+.faculties-content
+    margin-top 100px
+    +mq(992px)
+        margin-top 40px
+
+.main-filter
+    padding 40px
+    background grey url(../img/bg2.png) no-repeat
+    position relative
+    z-index 1000
+    +mq(600px)
+        padding 15px 20px
+    .selects
+        box-shadow 0 0 8px rgba(black, 0.07)
+        width calc(100% - 80px)
+        +mq(768px)
+            box-shadow none
+        +mq(600px)
+            width calc(100% - 52px)
+    .select-wrapper
+        width calc(100% / 3)
+        position relative
+        +mq(600px)
+            width calc(100% + 52px)
+            margin 5px 0
+        &.search3
+            +mq(600px)
+                width 100%
+        &:after
+            content ''
+            position absolute
+            width 2px
+            height 16px
+            top 50%
+            left 0
+            transform translateY(-50%)
+            background rgba(darkgrey, 0.3)
+            +mq(600px)
+                display none
+        input
+            background white
+            border none
+            text-transform uppercase
+            color rgba(black, 0.5)
+        &:first-child
+            &:after
+                display none
+    .input-field
+        width calc(100% / 3)
+        position relative
+        +mq(600px)
+            width calc(100% + 52px)
+            margin 5px 0
+        &:before
+            content ''
+            position absolute
+            width 2px
+            height 16px
+            top 50%
+            left 0
+            transform translateY(-50%)
+            background rgba(darkgrey, 0.3)
+            +mq(600px)
+                display none
+        input
+            background white
+            border none
+            text-transform uppercase
+            color rgba(black, 0.5)
+            &::placeholder
+                color rgba(black, 0.5)
+        
+.filter-search
+    width 42px
+    height 42px
+    margin-left 38px
+    border none
+    background white url(../img/search1.svg) no-repeat center center
+    background-size 50%
+    box-shadow 0 0 8px rgba(black, 0.07)
+    +mq(600px)
+        margin 0
+        right 20px
+        position absolute
+        box-shadow none
+        top 124px
+    
+.main-faculties
+    background blue url(../img/bg3.png) no-repeat
+    background-size cover
+    margin-top -40px
+    padding-top 150px
+    padding-bottom 90px
+    position relative
+    +mq(1200px)
+        display none
+    &:after
+        content ''
+        position absolute
+        width 100%
+        height 250px
+        bottom 0
+        left 0
+        background white
+    >.container
+        position relative
+        z-index 1
+        
+.each-faculty
+    position relative
+    margin-top 10px
+    display block
+    .image
+        image(310px)
+        +mq(1200px)
+            padding-top 60%
+        +mq(600px)
+            margin 0 -20px
+        &:before
+            content ''
+            position absolute
+            width 100%
+            height 100%
+            top 0
+            left 0
+            background rgba(black, 0.4)
+        &:after
+            content ''
+            position absolute
+            bottom 0
+            left 0
+            height 5px
+            width 100%
+            background orange
+    .icon 
+        img
+            width 51px
+    &.exact .image:after
+        background exactColor
+    &.humanitarian .image:after
+        background humanitarianColor
+    &.political .image:after
+        background politicalColor
+    &.psychology .image:after
+        background psychologyColor
+    &.economic .image:after
+        background economicColor
+    &.medicine .image:after
+        background medicineColor
+    &.law .image:after
+        background lawColor
+    .text
+        position absolute
+        z-index 1
+        bottom 12px
+        left 20px
+        width calc(100% - 60px)
+    .text-body
+        color white
+        padding-left 15px
+        width calc(100% - 71px)
+        height 51px
+        display flex 
+        align-items center
+        line-height 1.2
+        transition 0.3s
+        +mq(1200px)
+            width 100%
+            padding-left 0
+    .icon
+        transition 0.3s
+    &:hover
+        .text-body,
+        .icon
+            transform translateY(-20px)
+        
+.view-faculties
+    display block
+    width 100%
+    padding-top 630px
+    background white url(../img/bg4.png) no-repeat center center
+    background-size cover
+    margin-top 10px
+    position relative    
+    &:after
+        content ''
+        position absolute
+        width 100%
+        height 100%
+        border 20px solid orange
+        top 0
+        left 0   
+    div
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)   
+        max-width 216px
+        font-size 40px
+        padding-top 10px
+        color black
+        line-height 1.2
+        +mq(1200px)
+            font-size 30px
+    span
+        display block
+        padding-left 25px
+        img
+            width 40px
+
+.main-news
+    background grey url('../img/tsu-logo.png') no-repeat right center
+    background-size 60%
+    padding 46px 0
+    position relative
+    +mq(600px)
+        padding-bottom 70px
+    .main-title
+        +mq(600px)
+            margin-left 15px
+    &:after
+        content ''
+        position absolute
+        width 100%
+        height 182px
+        bottom 0
+        left 0
+        background white
+    .container
+        +mq(600px)
+            padding 0
+            width calc(100% - 12px)
+    .owl-carousel
+        margin 0 -6px
+        width calc(100% + 12px)
+    .item
+        display block
+        margin-top 20px
+        background #f2f7fb
+        transition 0.3s
+        margin 20px 6px 10px
+        &:hover
+            box-shadow 0 0 5px rgba(black, 0.3)      
+    .image
+        image(190px)
+    .title
+        color black
+        dots(54px, 3)
+        text-transform uppercase
+        line-height 1.3
+    .text
+        padding 20px
+    time
+        font-style italic
+        font-family bpg_normal
+        font-size 12px
+        margin-top 10px
+        display block
+        color #494949
+    .owl-theme .owl-nav [class*=owl-]
+        padding 0
+        width 35px
+        height 35px
+        position absolute
+        right 5px
+        top -52px
+        border-radius 0
+        display flex 
+        align-items center
+        justify-content center
+        background transparent
+        border 4px solid orange
+        filter grayscale(100%)
+        margin 0
+        img
+            width 16px
+        +mq(600px)
+            right 20px
+            bottom -42px
+            top auto
+    .owl-carousel .owl-nav .owl-prev
+        right 55px
+        +mq(600px)
+            right 70px
+.news-item
+    display block
+    margin-top 10px
+    background #f2f7fb
+    transition 0.3s
+    // margin 0 0 10px
+    &:hover
+        box-shadow 0 0 5px rgba(black, 0.3)      
+    .image
+        image(67%)
+    .title
+        color black
+        dots(54px, 3)
+        text-transform uppercase
+        line-height 1.3
+    .text
+        padding 20px
+    time
+        font-style italic
+        font-family bpg_normal
+        font-size 12px
+        margin-top 10px
+        display block
+        color #494949
+
+.graduated
+    margin 70px 50px 90px
+    width calc(100% - 100px)
+    padding 30px
+    border 5px solid orange
+    position relative
+    .owl-carousel
+        margin-left -80px
+        width calc(100% + 80px)
+    .image
+        width 560px
+        image(500px)
+        +mq(1200px)
+            width 450px
+    .text
+        width calc(100% - 590px)
+        margin-left 30px
+        +mq(1200px)
+            width calc(100% - 480px)
+    .item
+        background white
+    .title
+        padding 12px 28px 5px
+        margin-top 50px
+        display inline-block
+        font-weight bold
+        background orange
+        font-size 22px
+        margin-left -80px
+        position relative
+    .text-body
+        margin-top 30px
+        font-size 22px
+        font-family bpg_normal
+        line-height 1.3
+        dots(305px,11)
+    .owl-theme .owl-nav [class*=owl-]
+        padding 0
+        width 35px
+        height 35px
+        position absolute
+        left 592px
+        bottom 0px
+        border-radius 0
+        display flex 
+        align-items center
+        justify-content center
+        background transparent
+        border 4px solid orange
+        filter grayscale(100%)
+        margin 0
+        img
+            width 15px
+    .owl-carousel .owl-nav .owl-next
+        left 640px
+
+.graduated-title
+    font-size 22px
+    background white
+    position absolute
+    top -15px
+    left 30px
+    z-index 1
+    padding 0 26px
+
+.events
+    margin-top 40px
+    +mq(992px)
+        margin-top 0
+
+.events-form
+    background url(../img/filter-bg.png) no-repeat
+    background-size cover
+    border 20px solid blue
+    padding 31px 30px
+    margin-top 25px
+    +mq(600px)
+        padding 30px 20px 
+        border none
+        margin 25px -20px 0
+    .input-field
+        margin 30px 0
+    label
+        padding-left 40px
+        color #707070
+        font-family bpg_normal
+    input
+        font-family bpg_normal
+        padding-left 40px!important
+        color #707070!important
+        border none!important
+        box-shadow 0 0 8px rgba(black, 0.1)!important
+        &::placeholder
+            color #707070
+    button[type="submit"]
+        font-family bpg_normal
+        width 100%
+        background orange
+        border none
+        padding 14px 0 10px
+        letter-spacing -1px
+        img
+            filter contrast(200%)
+            margin-bottom -6px
+            width 20px
+            margin-right 5px
+    .dropdown-content li>a, 
+    .dropdown-content li>span
+        font-family bpg_normal
+        color #707070!important
+        padding-left 40px
+
+.input-field.datepicker
+    position relative
+    background white
+    input
+        background transparent
+        position relative
+        z-index 1
+    &:after
+        content ''
+        position absolute
+        width 20px
+        height 20px
+        background url(../img/icon.svg) no-repeat center center
+        background-size 80%
+        right 14px
+        top 12px
+        // z-index 1
+.picker__date-display
+    background #00497f
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected
+    background #00497f
+.picker__day.picker__day--today
+    color #00497f
+.picker__nav--prev:hover, .picker__nav--next:hover,
+button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus
+    background lightgrey
+.btn, .btn-large, .btn-flat
+    border-radius 0
+.picker__close, .picker__today, .picker__clear
+    color #00497f
+.picker__clear
+    color orange
+.events-item
+    margin 2px 6px
+    display block
+    p, div
+        color black
+    .text
+        width calc(100% - 100px)
+        padding-left 30px
+        +mq(992px)
+            padding-left 20px
+    .title
+        dots(44px,2)
+        font-size 18px
+        line-height 1.3
+        margin-top 18px
+        +mq(992px)
+            font-size 16px
+            line-height 1.4
+    .category
+        font-family bpg_normal
+        margin-top 5px
+    .date
+        width 100px
+        text-align center
+        // background white
+        padding 14px 10px
+        transition 0.5s
+        font-size 22px
+        +mq(992px)
+            font-size 18px
+        div
+            font-size 22px
+            text-align center
+            +mq(992px)
+                font-size 18px
+    .inside
+        padding 20px
+        transition 0.3s
+        width calc(100% - 12px)
+        background #f2f7fb
+        +mq(992px)
+            padding 4px 0 10px
+        &:hover
+            box-shadow 0 0 5px rgba(black, 0.3)
+            .date
+                color orange
+                box-shadow 0 0 5px rgba(black, 0.3)
+.events-slider
+    margin-top 23px
+.slick-vertical .slick-slide
+    border none
+.events-block
+    position relative
+    padding 0!important
+.events-prev,
+.events-next
+    width 35px
+    height 35px
+    position absolute
+    right 6px
+    top -47px
+    border-radius 0
+    display flex 
+    align-items center
+    justify-content center
+    background transparent
+    border 4px solid orange
+    filter grayscale(100%)
+    margin 0
+    +mq(992px)
+        top auto
+        bottom -47px
+    img
+        width 15px
+    &:hover
+        filter grayscale(0)
+.events-prev
+    right 56px
+footer
+    background #0066b2
+    padding-top 30px
+    margin-top 110px
+    +mq(992px)
+        margin-top 40px
+    +mq(600px)
+        margin-top 20px
+    .list
+        max-width 300px
+        margin 0 auto
+        a
+            color white
+            font-family bpg_normal
+            font-size 12px
+            padding 0 5px
+            position relative
+            &:after
+                content ''
+                position absolute
+                width 1px
+                height 10px
+                background white
+                transform rotate(20deg)
+                top 0
+                right 0
+            &:last-child:after
+                display none
+.footer-title
+    color white
+    font-size 14px
+    position relative
+    margin-bottom 20px
+    margin-top 30px
+    &:after
+        content ''
+        position absolute
+        width 40px
+        left 50%
+        transform translateX(-50%)
+        bottom -6px
+        height 2px
+        background orange
+.additional-links
+    margin-top 90px
+    +mq(600px)
+        margin-top 70px
+.each-link
+    display block
+    margin-top 10px
+    padding 30px 0 26px
+    background #f2f7fb
+    transition 0.3s
+    &.active
+        background orange
+    +mq(992px)
+        padding 15px 0 12px
+    +mq(600px)
+        padding 0
+    .image
+        width 140px
+        image(80px)
+        background-size 50%
+        +mq(992px)
+            width 110px
+        +mq(600px)
+            width 70px
+        &:after
+            content ''
+            position absolute
+            top 50%
+            right 0
+            transform translateY(-50%)
+            width 2px 
+            height 50px
+            background #2f2f2f
+            +mq(600px)
+                height 25px
+                background rgba(black, 0.8)
+    .text
+        width calc(100% - 200px)
+        padding 0 35px
+        font-size 22px
+        color #2f2f2f
+        margin-top 25px
+        transition 0.3s
+        +mq(992px)
+            margin-top 30px
+            font-size 16px
+            padding 0 25px
+            width calc(100% - 150px)
+        +mq(600px)
+            padding 0 15px
+            width calc(100% - 94px)
+            font-size 12px
+            margin-top 32px
+    .icon
+        img
+            width 15px
+            margin-top 26px
+            +mq(600px)
+                width 10px
+                margin-top 30px
+    &:hover
+        box-shadow 0 0 5px rgba(black, 0.3)
+
+.copyright-block
+    padding 10px 0
+    margin-top 40px
+    position relative
+    &:after
+        content ''
+        position absolute
+        width 50%
+        height 100%
+        left 0
+        bottom 0
+        background #00497f 
+        +mq(1200px)
+            width 100%
+    .container
+        position relative
+        z-index 1    
+    .socials
+        font-size 0
+        background #00497f
+        padding-right 10px
+        position relative
+        z-index 2
+        +mq(600px)
+            float none!important
+            text-align center
+            padding-right 0
+            padding-top 6px
+        a
+            background white
+            display inline-block
+            width 30px
+            height 30px
+            border-radius 50%
+            display inline-flex 
+            align-items center
+            justify-content center
+            margin-right 10px
+            transition 0.3s
+            &:hover
+                background orange
+            +mq(600px)
+                margin 0 5px
+        img
+            width 15px
+.copyright
+    font-size 12px
+    margin-top 8px
+    color white
+    padding 0 16px
+    position relative
+    z-index 2
+    background #00497f 
+    +mq(1200px)
+        padding 0 0 0 20px
+    +mq(600px)
+        float none!important
+        text-align center
+        padding 5px 0
+    img
+        width 120px
+
+.footer-line
+    position relative
+    &:after
+        content ''
+        position absolute
+        left 0
+        top 50%
+        width 100%
+        height 1px
+        background white
+        transform translateY(-50%)
+        +mq(600px)
+            display none
+
+[data-aos=fade-up] {
+    transform: translate3d(0,30px,0);
+}
+.left-content
+    background #f2f7fb
+    width 550px
+    height 100vh
+    padding 50px 50px 40px
+    overflow auto
+    transition 0.2s
+    box-shadow 0 0 30px rgba(black, 0.2) 
+    +mq(1600px)
+        width 450px
+    +mq(1200px)
+        width calc(100% - 100px)
+    +mq(600px)
+        width calc(100% - 70px)
+        padding 20px 20px
+    .search
+        display none
+        padding 40px 0 0 
+        +mq(1200px)
+            display block
+        +mq(600px)
+            padding 0
+.left-levels
+    opacity 1
+    transition 0.5s
+.menu-fixed
+    width 100%
+    height 100vh
+    position fixed
+    background white
+    top 0
+    left 0
+    z-index -5
+    transition 0.3s
+    opacity 0.5
+    opacity 0
+    &.active
+        opacity 1
+        z-index 100
+    .logo
+        +mq(600px)
+            display none
+    &.inactive
+        .left-levels
+            opacity 0
+            transform translateY(30px)
+.first-level
+    margin-top 40px
+    +mq(1600px)
+        margin-top 30px
+    +mq(600px)
+        margin-top 10px
+    &:hover
+        span
+            color blue
+    span
+        color rgba(#111, 0.8)
+        font-size 25px
+        display block
+        line-height 1.2
+        width calc(100% - 40px)
+        text-transform uppercase
+        +mq(1600px)
+            font-size 22px
+        +mq(600px)
+            font-size 14px
+    .arrow
+        filter grayscale(100%)
+        -ms-filter grayscale(100%)
+        transition 0.3s
+        img
+            width 20px
+            height 20px
+            margin-top -2px
+            +mq(600px)
+                width 12px
+.menu
+    margin-top 20px
+    li
+        display block
+        width 100%
+
+.left-logo
+    height 100vh
+    position fixed
+    left -146px
+    top 0
+    background white
+    z-index 110
+    box-shadow 0 0 30px rgba(black, 0.2) 
+    transition 0.5s
+    &.scrolling-down
+        left 0
+    &.on-clicked-hidden
+        left -146px
+    img
+        margin 13px
+    p
+        position absolute
+        left -60px
+        top 207px
+        width 300px
+        transform rotate(-90deg)
+        text-align right
+        margin 0
+        line-height 1.2
+    .logo
+        margin 0
+
+.right-menu
+    height 100vh
+    position fixed
+    right -146px
+    width 100px
+    top 0
+    background white
+    z-index 900
+    box-shadow 0 0 30px rgba(black, 0.2) 
+    transition 0.5s
+    +mq(1200px)
+        box-shadow 0 0 10px rgba(black, 0.2)
+    +mq(600px)
+        width 70px
+    &:after
+        content ''
+        position absolute
+        right 48%
+        transform translateX(-50%)
+        width 1px
+        height 100vh
+        background #d7d7d7
+    &.scrolling-down
+        right 0
+    &.on-clicked-visible
+        right 0
+
+.burger-bar-fixed
+    width 100%
+    height 100px
+    background #f2f7fb!important
+    border none
+    display flex 
+    justify-content center
+    align-items center
+    +mq(600px)
+        height 70px
+    div 
+        width 35px
+        +mq(600px)
+            width 25px
+    span
+        display block
+        width 33px
+        background #424852
+        height 2px
+        margin 5px 0
+        transition 0.9s
+        +mq(600px)
+            width 23px
+        &:first-child
+            -webkit-animation firstLine 0.9s forwards
+            animation firstLineReverse 0.9s forwards
+        &:nth-child(3)
+            -webkit-animation lastLine 0.9s forwards
+            animation lastLineReverse 0.9s forwards
+        
+    &.active
+        span
+            &:first-child
+                -webkit-animation firstLine 0.9s forwards
+                animation firstLine 0.9s forwards
+            &:nth-child(2)
+                opacity 0
+            &:nth-child(3)
+                -webkit-animation lastLine 0.9s forwards
+                animation lastLine 0.9s forwards
+
+.languages-fixed
+    a
+        color #424852
+        text-transform uppercase
+        font-size 18px
+        margin 26px 0
+        display block
+.search-fixed
+    background white
+    border none
+    width 100%
+    padding-bottom 30px
+    z-index 100
+    position relative 
+    img
+        width 33px
+        +mq(600px)
+            width 23px
+.socials-fixed
+    background white
+    position absolute
+    bottom 0px
+    width 100%
+    padding 20px 0 30px    
+    z-index 2
+    a
+        background white
+        width 30px
+        height 30px
+        border-radius 50%
+        display inline-flex 
+        align-items center
+        justify-content center
+        border 1px solid rgba(black, 0.1)
+        margin 5px 0
+        transition 0.3s
+        &:hover
+            box-shadow 0 0 5px rgba(black, 0.4)
+    img
+        width 15px
+    div
+        text-align center
+
+.second-level
+    margin-top 30px
+    position relative
+    display none
+    overflow hidden
+    +mq(1600px)
+        margin-top 26px
+    +mq(600px)
+        margin-top 5px
+    li.active
+        a
+            color blue
+            &:after
+                background blue
+    a
+        border-left 1px solid rgba(black, 0.1)
+        color rgba(17,17,17,0.8)
+        padding-left 40px
+        padding-top 5px
+        font-weight bold
+        transition 0.2s
+        font-family bpg_normal
+        position relative
+        +mq(600px)
+            font-size 12px
+            padding 5px 0 5px 16px 
+            line-height 1.3
+            font-weight normal
+        &:after
+            content ''
+            position absolute
+            width 2px
+            height 100%
+            left -1px
+            top 0
+        &:hover
+            color blue
+        
+.slidingLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px!important;
+    padding: 0 !important;
+    background-color: blue;
+}
+.menu
+    .active-dropdown
+        .first-level 
+            span
+                color blue
+            .arrow
+                transform rotate(-180deg) translateY(8px)
+                filter grayscale(0)
+
+.right-content
+    width calc(100% - 650px)
+    height 100vh
+    overflow auto
+    // padding-top 120px
+    margin-left 550px
+    position absolute
+    +mq(1200px)
+        display none
+    +mq(1600px)
+        margin-left 450px
+        width calc(100% - 550px)
+
+.search
+    padding 78px 80px 0
+    .search-inside
+        border 1px solid #d7d7d7
+        +mq(600px)
+            border none
+    .input-field
+        width 45%
+        +mq(600px)
+            width 100%
+            // border 1px solid #d7d7d7
+            margin-bottom 10px
+        &:nth-child(2)
+            +mq(600px)
+                width calc(100% - 54px)
+    .select-wrapper
+        position relative
+        &:after
+            content ''
+            position absolute
+            width 1px 
+            height 22px
+            background #d7d7d7
+            left -1px
+            top 52%
+            transition 0.2s
+            transform translateY(-50%) 
+            +mq(600px)
+                display none
+       *
+           color #424852 
+    input
+        border none!important
+        border-right 1px solid transparent!important
+        transition 0.2s
+        &::placeholder
+            color #424852
+        &:focus
+            background grey
+            border-right 1px solid #d7d7d7!important
+            +mq(600px)
+                background-color white!important
+                border-right none!important
+    .search-btn
+        margin-top 0
+        height 42px
+        background-size 24px
+        width 10%
+        transition 0.2s
+        position relative
+        background-color white
+        +mq(600px)
+            width 44px
+            height 44px
+            margin-left 10px
+            background-color white
+            // border 1px solid #d7d7d7
+        &:hover
+            background-color grey
+            &:after
+                height 100%
+        &:after
+            content ''
+            position absolute
+            width 1px 
+            height 22px
+            background #d7d7d7
+            left -1px
+            top 52%
+            transition 0.2s
+            transform translateY(-50%) 
+            +mq(600px)
+                display none
+.menu-faculties
+    margin-top 48px
+    padding-bottom 50px
+    +mq(1200px)
+        display none
+    a
+        color #242424
+        font-size 25px
+        line-height 1.4
+        transition 0.5s
+        display block
+        padding 22px 20px 20px 80px 
+        +mq(1600px)
+            font-size 22px
+        img
+            width 40px
+            margin-bottom -11px
+            margin-right 10px
+            transition 0.5s
+            opacity 0
+            margin-left -57px
+            filter brightness(100)
+            +mq(1600px)
+                width 36px
+                margin-bottom -9px
+    li
+        &.active,
+        &:hover
+            a
+                img
+                    opacity 1
+                    margin-left -15px
+            &.exact
+                a
+                    background exactColor
+                    color white
+            &.humanitarian
+                a
+                    background humanitarianColor
+                    color white
+            &.political
+                a
+                    background politicalColor
+                    color white
+            &.psychology
+                a
+                    background psychologyColor
+                    color white
+            &.economic
+                a
+                    background economicColor
+                    color white
+            &.medicine
+                a
+                    background medicineColor
+                    color white
+            &.law
+                a
+                    background lawColor
+                    color white
+.main-btn
+    position relative
+    span
+        position absolute
+        transition 0.3s
+        &:first-child
+            width 0
+            height 4px 
+            top -4px
+            background orange
+            left -4px
+        &:nth-child(2)
+            width 4px
+            height 0
+            top -4px
+            background orange
+            right -4px
+            transition-delay 0.3s
+        &:nth-child(3)
+            height 4px 
+            width 0
+            bottom -4px
+            background orange
+            right -4px
+            transition-delay 0.6s
+        &:nth-child(4)
+            width 4px
+            bottom -4px
+            height 0
+            background orange
+            left -4px
+            transition-delay 0.9s
+    &:hover
+        span:first-child
+            width calc(100% + 8px)
+        span:nth-child(2)
+            height calc(100% + 8px)
+        span:nth-child(3)
+            width calc(100% + 8px)
+        span:nth-child(4)
+            height calc(100% + 8px)
+        
+.owl-theme .owl-nav [class*=owl-]:not(.disabled)
+    &:hover
+        filter grayscale(0)
+.main-faculties-responsive
+    margin-bottom 40px
+    display none
+    +mq(1200px)
+        display block
+    a
+        color rgba(black, 0.6)
+        display block
+        padding 20px 40px 25px
+        background #f2f7fb
+        margin 10px 0
+        +mq(600px)
+            line-height 2
+            padding 20px 20px 25px
+        img
+            width 40px
+            margin-right 10px
+            margin-bottom -14px
+.responsive-menu-faculties
+    display none!important
+    +mq(1200px)
+        display block!important
+
+.graduated
+    +mq(992px)
+        display none
+
+.page-inside
+    position relative
+    padding 80px 0
+    margin -150px 0 -110px
+    +mq(600px)
+        padding 40px 0
+        margin-bottom -20px
+    +mq(992px)
+        margin-bottom -20px
+        margin-top 0
+    .after
+        content ''
+        position absolute
+        right 0
+        bottom 0
+        background white
+        height 100%
+        box-shadow 0 0 30px rgba(0,0,0,0.2)
+    .inside
+        position relative
+        z-index 2
+        
+.page-nav
+    position absolute
+    top 80px
+    left 0
+    width 100%
+    z-index 1
+    +mq(992px)
+        top 50%
+        transform translateY(-50%)
+    .title
+        text-shadow 0 0 5px rgba(black, 0.8)
+        font-size 24px
+        color orange
+        line-height 1.2
+        dots(55px,2)
+        height auto
+        max-height 55px
+    .breadcrumbs
+        font-size 0
+        margin-top 5px
+        a
+            color white
+            font-family bpg_normal
+            font-weight normal
+            text-shadow 0 0 5px rgba(black, 0.8)
+            font-size 12px
+            padding 0 10px 0 12px
+            position relative
+            transition 0.2s
+            &:after
+                content ''
+                position absolute
+                width 1px 
+                height 10px
+                top 50%
+                background white
+                right 0
+                transform translateY(-50%) rotate(20deg)
+            &:hover
+                color orange
+            &:last-child
+                &:after
+                    content ''
+                    display none
+.page-image
+    image(360px)
+    width 100%
+    position relative
+    &:after
+        content ''
+        position absolute
+        width 100%
+        height 100%
+        background rgba(blue, 0.4)
+        top 0
+        left 0
+    
+
+.about-page
+    padding-top 30px
+    .text
+        font-family bpg_arial
+        margin-top 40px
+        text-align justify
+        *
+            font-family bpg_arial
+
+.video-image
+    image(360px)
+    width 100%
+    display block
+    &:after
+        content ''
+        position absolute
+        width 60%
+        height calc(100% - 20px)
+        border 10px solid orange
+        right -25px
+        top -25px
+        z-index -1
+        +mq(+600px)
+            right -15px
+            top -15px
+    &:before
+        content ''
+        position absolute
+        width 65%
+        height 33%
+        border 10px solid orange
+        left -10px
+        bottom -10px
+        z-index -1
+    // &:hover
+        
+        
+.play-btn
+    background url(../img/play-btn.png) no-repeat center center
+    background-size 90%
+    width 70px
+    height 70px
+    left 50%
+    position absolute
+    top 50%
+    transform translate(-50%, -50%)!important
+
+.calendar-notes-block
+    margin-top 80px
+    margin-bottom 50px
+    +mq(600px)
+        margin-bottom 0
+        margin-top 30px
+
+.calendar-note
+    border 1px solid rgba(black, 0.1)
+    display block
+    overflow hidden
+    margin-top 10px
+    position relative
+    display flex 
+    align-items center
+    justify-content center
+    min-height 172px
+    .inside
+        position relative
+        z-index 0
+        padding 20px
+        width 100%
+        position relative
+        &:after
+            content ''
+            position absolute
+            width 100% 
+            height 100%
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            border 1px solid rgba(black, 0.0)
+            transition 0.3s
+    &:after
+        content ''
+        position absolute
+        width 100%
+        height 100%
+        background url(../img/logo2.png) no-repeat
+        background-position 250% 20%
+        background-size 80%
+        top 0
+        left 0
+        opacity 0.0
+        transition 0.5s
+    &:before
+        content ''
+        position absolute
+        width 100%
+        height 100%
+        top 0
+        left 0
+        background rgba(blue, 0.0)
+        transition 0.3s
+    &:hover
+        &:before
+            background rgba(blue, 0.05)
+        &:after
+            background-position 200% 20%
+            background-size 80%
+            opacity 0.05
+        .inside:after
+            border 1px solid rgba(black, 0.1)
+            width calc(100% - 16px)
+            height calc(100% - 16px)
+        .title
+            color #0071bb
+    .title
+        margin 20px 0 0
+        font-family bpg_arial
+        font-size 14px
+        line-height 1.5
+        dots(84px, 3)
+        display flex 
+        align-items center
+        justify-content center
+        color #464646
+        transition 0.2s
+    time
+        display inline-block
+        font-family bpg_arial
+        margin-top 20px
+        color rgba(black, 0.8)
+        opacity 0.6
+        padding-left 25px
+        background url(../img/icon.svg) no-repeat center left
+        background-size 16px
+        padding-top 2px
+
+.academic-filter
+    .last
+        +mq(600px)
+            width calc(100%)
+    
+.student-guide-text
+    .text
+        font-family bpg_arial
+        margin 30px 0
+        text-align justify
+
+.guide-image
+    image(424px)
+
+.guide-outer-list
+    margin-top 50px
+
+.guide-list
+    display block
+    height 160px
+    background grey
+    display flex 
+    align-items center
+    justify-content center
+    margin-top 10px
+    transition 0.3s
+    p
+        color #464646
+        dots(44px,2)
+        max-height 44px
+        height auto
+        padding 0 20px
+        text-transform uppercase
+    &:hover
+        box-shadow 0 0 5px rgba(0,0,0,0.3)
+
+.study-price
+    margin-top 40px
+    .main-title
+        margin-bottom 20px
+    .image
+        width 100%
+        image(405px)
+        margin-bottom 20px
+        margin-top 5px
+    .text
+        font-family bpg_arial
+
+.pdf-files
+    margin-top 30px
+.pdf-file
+    display block
+    margin-bottom 10px
+    width 100%
+    border 1px solid #ebebeb
+    display flex 
+    align-items center
+    background #f4f3f3
+    .image
+        width 60px
+        height 36px
+        background transparent url(../img/pdf.svg) no-repeat center center
+        background-size 35px
+        margin 10px 0
+    .text
+        background rgba(white)
+        width calc(100% - 60px)
+        padding 17px 20px 13px
+        min-height 56px
+        border-left 1px solid #ebebeb
+        .pdf-title
+            color #464646
+            font-size 18px
+        p
+            transition 0.3s
+    &:hover
+        .text p:first-child
+            color blue
+.short-block
+    margin-top 80px
+    .text-body
+        margin-top 20px
+        font-family bpg_arial
+        *
+            font-family bpg_arial
+    .text-title
+        font-weight bold
+        font-family bpg_arial
+        margin 20px 0 5px
+    .pdf-title-secondary
+        font-size 14px
+        color #464646
+    .text-desc
+        font-family bpg_arial
+        color #464646
+        dots(44px, 2)
+        height auto
+        max-height 44px
+    .pdf-files
+        padding 30px 0
+.full-width-image
+    width 100%
+    margin-top 30px
+    img
+        width 100%
+
+.collapsible
+    box-shadow none
+    border 1px solid #f4f6f8
+    li:nth-child(2n)
+        .collapsible-header
+            background #f4f6f8
+.collapsible-header
+    border 1px solid #f4f6f8
+    padding 14px 26px
+    .text
+        width calc(100% - 50px)
+        padding-top 5px
+        transition 0.3s
+    .icon
+        width 30px
+        margin-left 20px
+        height 30px
+        background url(../img/arr-blue.svg) no-repeat center center
+        background-size 50%
+        filter grayscale(100%)
+        transition 0.3s
+    &.active
+        .text
+            color blue
+        .icon
+            filter grayscale(0)
+            transform rotate(180deg)
+.collapsible-body
+    border-bottom none
+    padding 0
+.collapsible-inside
+    padding 26px
+.normative-acts
+    display block
+    font-family bpg_arial
+    color #707070
+    padding-left 25px
+    background url(../img/external-link-symbol.svg) no-repeat 0 3px
+    background-size 15px
+    margin-bottom 10px
+    &:hover
+        color blue
+.pdf-file + .normative-acts,
+.normative-acts + .pdf-file 
+    margin-top 20px
+
+
+.input-field.no-border
+    &:before
+        display none
+
+.pdf-title
+    font-family bpg_caps
+.each-book
+    display block
+    background white
+    margin-top 10px
+    padding 15px 18px
+    border 1px solid rgba(black, 0.1)
+    .text
+        height 58px
+    .image
+        border 1px solid rgba(black, 0.1)
+        margin 10px 0
+        image(110%)
+        transition 0.3s
+        background-size 60%
+    .title
+        font-family bpg_caps
+        font-size 16px
+        color #464646
+        margin-top 16px
+        transition 0.3s
+        dots(37px, 2)
+        max-height 37px
+        height auto
+        line-height 1.2
+    .author
+        font-size 14px
+        color #464646
+    &:hover
+        .title
+            color blue
+        .image
+            background-color #eaf6fc
+.book-info
+    color #464646
+    position relative
+    z-index 0
+    &:after
+        content ''
+        position absolute
+        width 100%
+        height 1px
+        background rgba(black, 0.1)
+        top 9px
+        left 0
+    *
+        font-family bpg_arial
+        font-size 12px
+    .left-block
+        position relative
+        z-index 1
+        padding 0 20px 0 0
+        background white
+    .right-block
+        position relative
+        z-index 1
+        padding 0 0 0 20px
+        background white
+.publishing-house
+    margin-top 80px
+
+.pagination
+    margin-top 80px
+    li
+        border-bottom 1px solid #959595
+        border-radius 0
+        height 26px
+        margin 0 2px
+        &.button
+            border none
+        &.active
+            border-bottom 1px solid #00aeef
+            background transparent
+            a
+                color #464646
+        a
+            font-family bpg_arial
+            font-size 16px
+            color #464646
+            padding 0 8px
+
+.main-btn
+    padding 20px 40px 16px
+    border 4px solid white
+    position relative
+    z-index 1
+    color white
+    display block
+    background blue
+    margin-top -116px
+    font-size 18px
+    margin-left 60px
+    &.download-book
+        position absolute
+        margin 0
+        color #464646
+        bottom -29px
+        width calc(100% - 80px)
+        background white
+        left 30px
+        border 5px solid #ebebeb
+        padding 10px
+    +mq(800px)
+        margin-left 0
+    +mq(600px)
+        width 100%
+        text-align center
+        padding 20px 10px 16px
+
+.download-book
+    position absolute
+    bottom -29px
+    width calc(100% - 80px)
+    background white
+    left 30px
+    border 5px solid #ebebeb
+    padding 10px
+    p
+        color #464646
+        display block
+        width calc(100% - 43px)
+        text-align center
+        transition 0.3s
+        padding 6px 0 0
+        +mq(600px)
+            padding-top 11px
+            font-size 12px
+    img
+        width 28px
+        margin-top 4px
+        &.arrow
+            width 15px
+            margin-top 10px
+            filter grayscale(100%)
+            transform rotate(-90deg)
+
+.book-information
+    .image
+        border 1px solid rgba(black, 0.1)
+        image(500px)
+        background-size 65%
+        width 400px
+        +mq(992px)
+            float none!important
+            width 100%
+            max-width 400px
+            margin 0 auto
+.book-text
+    width calc(100% - 450px)
+    padding-left 10px
+    +mq(992px)
+        float none!important
+        width 100%
+        margin-top 60px
+        padding-left 0
+    .title
+        position relative
+        margin 0 0 16px
+        &:after
+            content ''
+            position absolute
+            width 100%
+            height 1px 
+            background rgba(black, 0.1)
+            top 10px
+            left 0
+        span
+            display inline-block
+            padding 0 30px
+            position relative
+            z-index 1
+            background white
+            +mq(600px)
+                padding 0 30px 0 0 
+    .text-body
+        font-family bpg_arial
+.book-inside-info
+    margin-bottom 20px
+    padding-left 60px
+    +mq(600px)
+        padding-left 20px
+    div
+        text-transform uppercase
+        font-family bpg_arial
+        font-size 14px
+        font-weight bold
+
+.similar-books
+    margin-top 130px
+    +mq(992px)
+        margin-top 50px
+    .owl-theme .owl-nav [class*=owl-]
+        padding 0
+        width 35px
+        height 35px
+        position absolute
+        right 0
+        top -52px
+        border-radius 0
+        display flex 
+        align-items center
+        justify-content center
+        background transparent
+        border 4px solid orange
+        filter grayscale(100%)
+        margin 0
+        +mq(600px)
+            right 10px
+            top 54%
+            transform translateY(-50%)
+        img
+            width 16px
+    .owl-carousel .owl-nav .owl-prev
+        right 50px
+        +mq(600px)
+            right auto
+            left 10px
+    .owl-carousel
+        +mq(600px)
+            width calc(100% + 40px)
+            margin 0 -20px
+
+// .faculty
+.filter-list
+    position relative
+    button
+        width 100%
+        padding 27px 25px 20px 
+        border none
+        background blue
+        font-size 22px
+        color white
+        .icon
+            width 30px
+            height 30px
+            border 4px solid white
+            display flex 
+            align-items center
+            justify-content center
+            &.active img
+                transform rotate(180deg)
+        img
+            transition 0.3s
+            width 16px
+    .list
+        padding 25px 20px
+        position absolute
+        background white
+        width 100%
+        z-index 2000
+        display none
+        box-shadow 0 0 10px rgba(black, 0.15)
+        +mq(992px)
+            position static
+        a
+            font-size 14px 
+            color #464646
+            display block
+            padding 8px 20px
+            transition 0.3s
+            border-bottom 1px solid rgba(black, 0.05)
+            &:hover,
+            &.active
+                color blue
+                padding-left 34px
+
+.faculty
+    .full-block
+        border 5px solid orange
+    &.exactColor
+        .filter-list
+            button  
+                background rgb(1,112,186)
+                background -moz-linear-gradient(left, rgba(1,112,186,1) 0%, rgba(exactColor,1) 100%)
+                background -webkit-linear-gradient(left, rgba(1,112,186,1) 0%,rgba(exactColor,1) 100%)
+                background linear-gradient(to right, rgba(1,112,186,1) 0%,rgba(exactColor,1) 100%)
+        .filter-list-carousel,
+        .full-block
+            border 5px solid exactColor
+            
+    &.humanitarianColor
+        .filter-list
+            button  
+                background rgb(1,112,186)
+                background -moz-linear-gradient(left, rgba(1,112,186,1) 0%, rgba(humanitarianColor,1) 100%)
+                background -webkit-linear-gradient(left, rgba(1,112,186,1) 0%,rgba(humanitarianColor,1) 100%)
+                background linear-gradient(to right, rgba(1,112,186,1) 0%,rgba(humanitarianColor,1) 100%)
+        .filter-list-carousel,
+        .full-block
+            border 5px solid humanitarianColor
+    &.politicalColor
+        .filter-list
+            button  
+                background rgb(1,112,186)
+                background -moz-linear-gradient(left, rgba(1,112,186,1) 0%, rgba(politicalColor,1) 100%)
+                background -webkit-linear-gradient(left, rgba(1,112,186,1) 0%,rgba(politicalColor,1) 100%)
+                background linear-gradient(to right, rgba(1,112,186,1) 0%,rgba(politicalColor,1) 100%)
+        .filter-list-carousel,
+        .full-block
+            border 5px solid politicalColor
+    &.economicColor
+        .filter-list
+            button  
+                background rgb(1,112,186)
+                background -moz-linear-gradient(left, rgba(1,112,186,1) 0%, rgba(economicColor,1) 100%)
+                background -webkit-linear-gradient(left, rgba(1,112,186,1) 0%,rgba(economicColor,1) 100%)
+                background linear-gradient(to right, rgba(1,112,186,1) 0%,rgba(economicColor,1) 100%)
+        .filter-list-carousel,
+        .full-block
+            border 5px solid economicColor
+    &.psychologyColor
+        .filter-list
+            button  
+                background rgb(1,112,186)
+                background -moz-linear-gradient(left, rgba(1,112,186,1) 0%, rgba(psychologyColor,1) 100%)
+                background -webkit-linear-gradient(left, rgba(1,112,186,1) 0%,rgba(psychologyColor,1) 100%)
+                background linear-gradient(to right, rgba(1,112,186,1) 0%,rgba(psychologyColor,1) 100%)
+        .filter-list-carousel,
+        .full-block
+            border 5px solid psychologyColor
+    &.medicineColor
+        .filter-list
+            button  
+                background rgb(1,112,186)
+                background -moz-linear-gradient(left, rgba(1,112,186,1) 0%, rgba(medicineColor,1) 100%)
+                background -webkit-linear-gradient(left, rgba(1,112,186,1) 0%,rgba(medicineColor,1) 100%)
+                background linear-gradient(to right, rgba(1,112,186,1) 0%,rgba(medicineColor,1) 100%)
+        .filter-list-carousel,
+        .full-block
+            border 5px solid medicineColor
+    &.lawColor
+        .filter-list
+            button  
+                background rgb(1,112,186)
+                background -moz-linear-gradient(left, rgba(1,112,186,1) 0%, rgba(lawColor,1) 100%)
+                background -webkit-linear-gradient(left, rgba(1,112,186,1) 0%,rgba(lawColor,1) 100%)
+                background linear-gradient(to right, rgba(1,112,186,1) 0%,rgba(lawColor,1) 100%)
+        .filter-list-carousel,
+        .full-block
+            border 5px solid lawColor
+.filter-list-carousel
+    +mq(992px)
+        margin-top 10px
+        border none
+    +mq(600px)
+        border none!important
+        background grey
+    .owl-carousel
+        width calc(100% - 140px)
+        margin-left 70px
+        +mq(600px)
+            margin-left 40px
+            width calc(100% - 80px)
+    .owl-theme .owl-nav [class*=owl-]
+        padding 0
+        width 35px
+        height 35px
+        position absolute
+        right -50px
+        top 20px
+        border-radius 0
+        display flex 
+        align-items center
+        justify-content center
+        background transparent
+        border 4px solid orange
+        filter grayscale(100%)
+        margin 0
+        img
+            width 16px
+    .owl-carousel .owl-nav .owl-prev
+        right auto
+        left -50px
+    // .owl-carousel
+    //     +mq(600px)
+    //         width calc(100% + 40px)
+    //         margin 0 -20px
+    .item
+        a
+            text-align center
+            display block
+            margin 10px 0
+            dots(50px, 3)
+            display flex 
+            align-items center
+            justify-content center
+            font-family bpg_normal
+            color #464646
+            transition 0.3s
+            &.active,
+            &:hover
+                color blue
+.about-faculty
+    margin-top 50px
+    .full-block
+        position relative
+        width calc(100% - 80px)
+        padding 30px
+        +mq(750px)
+            width 100%
+        .title
+            position absolute
+            display inline-block
+            top -17px
+            left 50px
+            z-index 1
+            padding 0 26px
+            background white
+            font-size 22px
+            +mq(1450px)
+                left 30px
+            +mq(600px)
+                font-size 14px
+                top -11px
+        .image
+            width 550px
+            margin-right -115px
+            image(360px)
+            &::after
+                content ''
+                position absolute
+                width 100%
+                height 100%
+                background rgba(black,0.3)
+                top 0
+                left 0
+            +mq(1450px)
+                width 400px
+            +mq(992px)
+                width 300px
+            +mq(750px)
+                margin-right 0
+                width 100%
+            +mq(600px)
+                width calc(100% + 110px)
+                margin-right -55px
+        .text
+            padding 46px 0 50px 50px
+            width calc(100% - 520px)
+            +mq(1450px)
+                width calc(100% - 320px)
+                padding 30px
+            +mq(992px)
+                width calc(100% - 220px)
+                padding 0
+            +mq(750px)
+                width 100%
+                margin-top 30px
+            div
+                dots(242px, 11)
+            *
+                text-align justify
+                font-size 15px
+                font-family bpg_arial
+                +mq(992px)
+                    text-align left
+            a
+                color #0071bb
+.faculty
+    .main-news
+        margin-top 40px
+        background transparent
+        +mq(600px)
+            margin 0 -13px
+
+.all-programs-link
+    background #f2f7fb
+    padding 30px
+    margin-top 30px
+    margin-bottom 80px
+    background #f2f7fb url(../img/bg2.png) no-repeat
+    +mq(600px)
+        margin 0 -20px 40px 
+        width calc(100% + 40px)
+    .text
+        font-size 18px
+        margin-top 25px
+        width calc(100% - 500px)
+        +mq(992px)
+            margin-top 0
+            width 100%
+            text-align center
+            
+.view-programs
+    position relative
+    display block
+    margin-top 0
+    +mq(992px)
+        margin-top 10px
+        width 100%
+        text-align center
+.virtual-tour
+    position relative
+    margin-bottom 70px
+    .image
+        width 100%
+        image(300px)
+        &:after
+            content ''
+            position absolute
+            width 100%
+            height 100%
+            top 0
+            left 0
+            background rgba(blue, 0.6)
+    .text
+        position absolute
+        top 50%
+        left 50%
+        display block
+        transform translate(-50%, -50%)
+        text-align center
+        .img
+            width 70px
+            height 70px
+            display inline-block
+            text-align center
+            background rgba(black, 0.3)
+            border-radius 50%
+            img
+                width 56px
+                margin-top 8px
+                transition 0.3s
+        .text-body
+            color white
+            margin-top 10px
+            font-size 22px
+        &:hover
+            img
+                transform scale(1.06,1.06)
+
+.useful-links-block
+    background #faf8f8
+    padding 60px 0
+    margin-top 80px
+    margin-bottom -80px
+    .main-title
+        margin-bottom 9px
+    .owl-theme .owl-nav [class*=owl-]
+        padding 0
+        width 35px
+        height 35px
+        position absolute
+        right 0
+        top -52px
+        border-radius 0
+        display flex 
+        align-items center
+        justify-content center
+        background transparent
+        border 4px solid orange
+        filter grayscale(100%)
+        margin 0
+        +mq(600px)
+            right 20px
+            top 50%
+            transform translateY(-40%)
+            right 10px
+        img
+            width 16px
+    .owl-carousel .owl-nav .owl-prev
+        right 50px
+        +mq(600px)
+            right auto
+            left 10px
+    .owl-carousel
+        +mq(600px)
+            width calc(100% + 40px)
+            margin 0 -20px
+.useful-link
+    display block
+    image(50%)
+    background-color white
+    background-size 60%
+    margin-top 10px
+    border 1px solid rgba(black, 0.1)
+    transition 0.3s
+    &:hover
+        background-size 62%
+.faculty-inside-list
+    margin-bottom 70px
+    .main-title
+        margin-top 70px
+        margin-bottom 20px
+.unordered-list
+    li
+        font-family bpg_arial
+        font-size 14px
+        margin-left 16px
+        list-style-type circle!important
+.il-text
+    font-family bpg_arial
+    font-size 14px
+.input-field
+    &.before-none
+        &:before
+            display none
+.calendar-note
+    &.without-time
+        .title
+            margin-bottom 20px
+
+.date-block
+    font-size 0
+    margin-bottom 10px
+    div
+        display inline-block
+        font-size 12px
+        text-align left
+        padding-left 34px
+        margin 0 20px
+        color #464646
+        display: inline-block;
+        background: url(../img/icon.svg) no-repeat center left;
+        background-size 26px
+        line-height 1.3
+        padding-top 5px
+        span
+            display block
+    .time
+        background: url(../img/clock.svg) no-repeat center left;
+        background-size 26px
+.event-calendar
+    .title
+        margin-top 0
+.event-inside-text
+    text-align justify
+    font-size 14px
+    font-family bpg_arial
+    +mq(992px)
+        margin-top 30px
+
+.event-inside-info
+    position relative
+    background #f4f9fd
+    padding 20px
+    border 1px solid rgba(black, 0.05)
+    display block
+    &:before
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../img/logo2.png) no-repeat;
+        background-position: 150% 20%;
+        background-size: 75%;
+        top: 0;
+        left: 0;
+        opacity: 0.04;
+        transition: 0.5s;
+    >div
+        position relative
+        z-index 1
+    &:after
+        content ''
+        position absolute
+        left 20px
+        top 20px
+        right 20px
+        bottom 20px
+        border 1px solid rgba(black, 0.05)
+    a
+        background #0072bc
+        position absolute
+        right 0
+        top -50px
+        color white
+        padding 12px 28px 9px
+        margin-top 0
+        border none
+    .date-block
+        margin-top 50px
+        padding-left 40px
+        +mq(600px)
+            padding-top 10px
+    .address
+        margin-left 60px
+        padding-left 35px
+        background url(../img/placeholder.svg) no-repeat 0 center
+        background-size 26px
+        font-family bpg_arial
+        line-height 1.1
+        font-size 12px
+        margin-top 30px
+        margin-bottom 50px
+        +mq(600px)
+            margin-left 30px
+        span
+            font-size 12px
+            color #464646
+            display block
+.event-inside
+    .main-title
+        margin-top 100px
+    .owl-theme .owl-nav [class*=owl-]
+        padding 0
+        width 35px
+        height 35px
+        position absolute
+        right 0
+        top -52px
+        border-radius 0
+        display flex 
+        align-items center
+        justify-content center
+        background transparent
+        border 4px solid orange
+        filter grayscale(100%)
+        margin 0
+        +mq(600px)
+            right 20px
+            top 50%
+            transform translateY(-40%)
+            right 10px
+        img
+            width 16px
+    .owl-carousel .owl-nav .owl-prev
+        right 50px
+        +mq(600px)
+            right auto
+            left 10px
+    .owl-carousel
+        +mq(600px)
+            width calc(100% + 40px)
+            margin 0 -20px
+
+.library-history
+    margin-top 20px
+    .library-image
+        image(490px)
+        +mq(992px)
+            padding-top (60%)
+            margin-bottom 30px
+        +mq(600px)
+           margin 8px -20px 30px
+.library-inside
+    margin-bottom 70px
+.library
+    &.main-title
+        margin-bottom 10px
+
+.society-image
+    image(379px)
+    +mq(992px)
+        margin-bottom 30px
+        padding-top 60%
+    +mq(600px)
+        margin 0 -20px 30px
+        padding-top 80%
+.society-inside
+    .main-title
+        margin-bottom 30px
+
+.society-history
+    margin-bottom 80px
+
+.representation
+    padding 80px 0
+    position relative
+    background-position center center
+    background-size cover
+    &:after
+        content ''
+        position absolute
+        width 100%
+        height 100%
+        top 0
+        left 0
+        background rgba(blue, 0.5)
+    .container
+        position relative
+        z-index 1
+    // .main-title
+    //     color white
+.each-representator
+    display block
+    width calc(20% - 10px)
+    margin 5px
+    height 160px
+    background #e7edf2
+    padding 10px
+    display flex
+    align-items center
+    justify-content center
+    +mq(992px)
+        width calc(100% / 4 - 10px)
+    +mq(850px)
+        width calc(100% / 3 - 10px)
+    +mq(700px)
+        width calc(100% / 2 - 10px)
+    +mq(500px)
+        width calc(100% - 10px)
+    .title
+        width 100%
+        font-size 18px
+        color #464646
+        dots(54px,2)
+        height auto
+        max-height 54px
+        line-height 1.2
+    .position 
+        font-family bpg_arial
+        font-size 14px
+        width 100%
+        color #464646
+        dots(42px,2)
+        height auto
+        max-height 42px
+        line-height 1.2
+.representators
+    padding-top 30px
+.how-to-join 
+    margin-top 70px
+    position relative
+    .main-title
+        margin-bottom 30px
+    .all-text
+        margin-bottom 30px
+
+.museum-page
+    .about-faculty
+        margin-top 12px
+
+.museum-structure
+    margin-top 80px
+    .main-title
+        margin-bottom 30px
+
+.search-page
+    .main-title
+        margin-top 80px
+.main-secondary-title
+    font-family bpg_arial
+    margin-top 10px
+    color #767676
+    font-size 16px
+.search-head
+    padding-left 30px
+    margin-bottom 20px
+    +mq(600px)
+        padding-left 15px
+.search-title
+    font-size 22px
+    color #242424
+.count-results
+    color #767676
+    font-family bpg_arial
+    font-size 14px
+    span
+        font-weight bold
+        font-size 20px
+.search-results
+    position relative
+    overflow hidden
+    margin-top 80px
+    border-left 1px solid rgba(black, 0.2)
+    li
+        &.active
+            a
+                color blue
+    a
+        color rgba(17,17,17,0.8)
+        padding-left 30px
+        padding-top 5px
+        font-weight bold
+        display block
+        transition 0.2s
+        font-family bpg_arial
+        +mq(600px)
+            font-size 12px
+            padding 5px 0 5px 16px 
+            line-height 1.3
+            font-weight normal
+        &:hover
+            color blue
+
+.vacancy-filter
+    .input-field:first-child
+        &:before
+            display none
+    .picker__input
+        &:before
+            content ''
+            position absolute
+            width 2px
+            display block!important
+            height 16px
+            top 50%
+            left 0
+            transform translateY(-50%)
+            background rgba(darkgrey, 0.3)
+            +mq(600px)
+                display none!important
+    .select-wrapper.last
+        +mq(600px)
+            width 100%!important
+            
+
+.vacancy-head
+    margin-top 50px
+    background #006ab3
+.vacancy-title
+    padding 20px 20px 15px
+    color white
+    text-transform uppercase
+    width calc(100% - 250px)
+    +mq(992px)
+        width calc(100% - 180px)
+    +mq(600px)
+        width 100%
+        text-align center
+.vacancy-date-title
+    width 250px
+    padding 20px 20px 15px
+    color white
+    text-transform uppercase
+    border-left 1px solid #efefef
+    +mq(992px)
+        width 180px
+    +mq(600px)
+        width 100%
+        border-left none
+.news-page
+    margin-top 70px
+    +mq(600px)
+        margin-top 30px
+
+.related-news
+    margin-top 80px
+
+.news-info
+    margin 20px 0
+    div
+        margin-top 10px
+        color #464646
+        a
+            color blue
+
+.each-vacancy
+    border 1px solid #efefef
+    border-top none
+    transition 0.3s
+    &:nth-child(2n)
+        background grey
+    &:hover
+        background darken(grey, 3%)
+.vacancy-text
+    width calc(100% - 250px)
+    padding 18px 18px 14px
+    +mq(992px)
+        width calc(100% - 180px)
+    +mq(600px)
+        width 100%
+        text-align center
+    .title
+        display block
+        color #464646
+        font-size 12px
+        transition 0.2s
+        &:hover
+            color blue  
+    .text
+        font-family bpg_arial
+        color #464646
+        font-size 12px
+        dots(36px,2)
+        margin-top 10px
+        *
+            font-family bpg_arial
+    .view-more
+        font-family bpg_arial
+        font-size 12px
+
+.vacancy-info
+    width 250px
+    padding 30px 18px 
+    border-left 1px solid #efefef
+    +mq(992px)
+        width 180px
+    +mq(600px)
+        width 100%
+        border-top 1px solid #efefef
+        border-left none
+    time
+        font-size 12px
+    .vacancy-progress
+        font-size 12px
+        font-family bpg_arial
+        margin 0 auto
+        display inline-block
+        background #27ae60
+        padding 5px 20px
+        color white
+        margin-top 8px
+        &.done
+            background #e74c3c
+
+.gallery-image
+    image(100%)
+    display block
+    margin-top 10px
+
+.image-gallery
+    margin 50px 0 30px
+    .main-title
+        margin-bottom 20px
+
+.sl-overlay
+    z-index 1000
+    opacity 0.9
+.sl-prev,
+.sl-next
+    border 5px solid orange!important
+    display flex!important
+    align-items center!important
+    justify-content center!important
+    filter grayscale(100%)
+    transition 0.3s
+    width 44px!important
+    z-index 11111!important
+    height 44px!important
+    img
+        width 26px
+    &:hover
+        filter grayscale(0)
+.sl-next
+    right 27px!important
+    +mq(600px)
+        right 10px!important
+.sl-prev
+    left 27px!important
+    +mq(600px)
+        left 10px!important
+.sl-counter
+    left 24px!important
+    top 36px!important
+.sl-current,
+.sl-counter,
+.sl-total
+    color #919191!important
+    font-size 27px!important
+.sl-wrapper .sl-close
+    font-size 70px
+    right 42px
+    top 42px
+    color #919191
+    transition 0.3s
+    &:hover
+        color orange
+        opacity 1
+.events-block-2
+    padding 20px
+    +mq(600px)
+        padding 20px 0
+    .main-title
+        margin-bottom 30px
+
+#googleMap
+    width 100%
+    height 1000px
+.map-content-outer
+    width 240px
+    height 210px
+    position relative
+    
+.map-content
+    width 100%
+    height 200px
+    position absolute
+    .img
+        image(60%)
+        top 0
+        left 0
+.gm-ui-hover-effect
+    display none!important
+.gm-style-iw
+    left 25px!important
+    top 25px!important
+.map-title
+    margin-top 18px
+    text-align center
+    dots(26px,2)
+.virtual-tour-page
+    float right
+    margin -80px 0
+    
+.font-hide
+  display none
+.selects
+    .input-field
+        &:before
+            display none
+
+.image,
+.guide-image
+    background-color #f2f7fb!important
+.achievement 
+    .image
+        background-color orange!important
+
+.faculty-filter
+    margin-bottom 50px
+
+.main-form
+    .input-field
+        margin-top 10px
+        textarea
+            border 1px solid rgba(black, 0.15)
+            padding 10px 15px
+            height 100px
+    .main-title
+        margin-bottom 30px
+.input-checkbox
+    display block
+    margin-top 10px
+    &:after
+        content ''
+        display table
+        clear both
+.form-title
+    margin-top 30px
+    // margin-bottom 10px
+.file-field
+    .file-btn
+        height 42px
+        box-shadow none
+        background blue
+.btn-submit
+    padding 10px 30px 7px
+    text-transform uppercase
+    border none
+    background blue
+    color white
+    &:focus
+        background darken(blue,10%)
+.news-filter
+    .input-field
+        width 50%
+        +mq(600px)
+            width calc(100% + 52px)
+    .select-wrapper
+        width 50%
+        +mq(600px)
+            width 100%
+    .filter-search
+        +mq(600px)
+            top 72px
+
+.character-counter
+    display none!important
+.staff-section
+    margin-top 30px
+.staff-member
+    margin-top 20px
+    .image
+        display block
+        image(110%)
+        transition 0.3s
+    .title
+        font-size 22px
+        color black
+        margin-top 10px
+        transition 0.3s
+        +mq(600px)
+            font-size 15px
+    &:hover
+        .title
+            color blue
+        .image
+            transform scale(1.02,1.02)
+    .position 
+        font-family bpg_normal
+        +mq(600px)
+            font-size 12px
+
+.staff-item
+    .staff-image
+        image(110%)
+    .resume
+        margin-top 10px
+    .title
+        font-size 22px
+        line-height 1
+    .position 
+        font-family bpg_normal
+        margin 10px 0 15px
+    .text
+        font-family bpg_arial!important
+        *
+            font-family bpg_arial!important
+.exhibitors-search
+    border: 20px solid #0066b1;
+    +mq(600px)
+        border none
+        margin 0 -20px
+        background #faf8f8 url("../img/filter-bg.png") no-repeat
+        background-size cover
+    .title
+        font-size 22px
+        padding 30px 0 25px
+
+.exhibitors-filter
+    padding 0 30px 30px
+    +mq(600px)
+        padding 0 20px 30px
+    .selects
+        width 100%
+        position relative
+    input,
+    .select-wrapper
+        background: #fff;
+        border: none;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.5);
+        &::placeholder
+            color rgba(black, 0.5)
+    .first-block
+        box-shadow 0 0 10px rgba(black, 0.1)
+        +mq(600px)
+            box-shadow none
+        .input-field,
+        .select-wrapper
+            position relative
+            width 50%
+            border none
+            +mq(600px)
+                width 100%
+                box-shadow 0 0 10px rgba(black, 0.1)
+                margin-bottom 20px
+        .select-wrapper
+            &::after
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 16px;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background: rgba(66,72,82,0.3);
+                +mq(600px)
+                    display none
+        input
+            border none
+    .second-block
+        margin-top 30px
+        +mq(600px)
+            margin-top 0
+        .input-field,
+        .select-wrapper
+            position relative
+            width calc(100% / 3)
+            border none
+            +mq(600px)
+                width calc(100% + 80px)
+                margin-bottom 20px
+                box-shadow 0 0 10px rgba(black, 0.1)
+        .select-wrapper.last
+            &::after
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 16px;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                background: rgba(66,72,82,0.3);
+                +mq(600px)
+                    display none
+            &.short
+                +mq(600px)
+                    width calc(100% + 20px)
+        input
+            border none
+    .selects-inside
+        width calc(100% - 80px)
+        box-shadow 0 0 10px rgba(black, 0.1)
+        +mq(600px)
+            box-shadow none
+    .filter-search
+        right 0
+        bottom 20px
+        top auto
+.exhibitor-results
+    margin-top 70px
+.exhibitor-item
+    margin-bottom 20px
+    .title
+        color black
+        font-size 16px
+        display block
+        line-height 1
+        margin-bottom 14px
+    .left-text
+        width calc(100% - 210px)
+        margin-right 10px
+        +mq(600px)
+            width calc(100% - 100px)
+    .right-image
+        width 200px 
+        +mq(600px)
+            width 90px 
+        .image
+            display block
+            image(140px)
+.exhibitor-info
+    font-family bpg_arial
+    font-size 14px;
+    span
+        font-weight bold
+        font-family bpg_normal
+    &.last
+        dots(43px,2)
+.exam-center
+    .text
+        font-family bpg_arial
+        &.warning
+            color #e74c3c
+            font-size 18px
+            font-family bpg_caps
+            margin 30px 0 20px
+        &.secondary
+            margin 5px 0
+            font-size 14px
+.exam-result
+    margin-top 40px
+.exam-filter
+    padding: 20px 40px;
+    background: #f2f7fb url(../img/bg2.png) no-repeat;
+    position: relative;
+    z-index: 1000;
+    margin-top 40px
+    +mq(600px)
+        padding 1px 20px 10px 
+        margin 0 -20px
+    .filter
+        margin 20px 0
+    .title
+        width 170px
+        color #707070
+        line-height 46px
+        font-size 16px
+        height 42px
+        overflow hidden
+    .input-field
+        margin-bottom 0
+        width: calc(100% - 250px);
+        +mq(600px)
+            width calc(100% - 62px)
+    .filter-search
+        +mq(600px)
+            box-shadow 0 0 10px rgba(black, 0.1)!important
+            position static
+            margin-left 20px
+    input
+        border none!important
+        box-shadow 0 0 10px rgba(black, 0.1)!important
+
+.exam-text
+    margin-top 75px
+    .name
+        color #707070
+        font-size 16px
+        margin-top 36px
+    .faculty-name
+        color #707070
+        font-size 14px
+        font-family bpg_normal
+        margin-top 17px
+        span
+            font-size 14px
+            font-weight bold
+            color #707070
+
+.learning-program
+    .each-link
+        cursor pointer
+        padding 12px 0 6px
+        +mq(600px)
+            padding-top 5px
+        .text
+            margin-top 15px
+            padding-top 3px
+            font-size 16px
+            width calc(100% - 60px)
+        .icon 
+            img
+                margin-top 15px
+                margin-bottom 12px
+    .description
+        padding 0 0
+        font-family bpg_arial
+        display none
+        height 0
+        max-height 0
+        overflow hidden
+        +mq(992px)
+            height auto
+            max-height none
+            padding 20px 0
+.learning-text
+    margin 40px 30px
+    font-family bpg_arial
+    *
+        font-family bpg_arial
+    +mq(992px)
+        display none
+.svg-map
+    margin 50px 0
+    +mq(600px)
+        display none
+.inter-partniors
+    .selects
+        .input-field,
+        .select-wrapper
+            width 50%
+            +mq(600px)
+                width 100%
+        .input-field
+            +mq(600px)
+                width calc(100% + 52px)
+    .filter-search
+        +mq(600px)
+            top 72px
+    .main-title
+        margin-top 50px
+.each-partnior
+    display block
+    margin-bottom 10px
+    .image
+        width 180px
+        image(132px)
+    .title
+        width calc(100% - 200px)
+        margin-left 20px
+        color black
+        font-size 18px
+        dots(130px,5)
+        transition 0.3s
+    &:hover
+        .title
+            color blue
+
+.partniors-result
+    margin-top 40px
+.img-text
+    position absolute
+    bottom 20px
+    z-index 1
+    left 30px
+    right 20px
+    .text-body
+        width: calc(100% - 90px);
+        margin-left: 20px;
+        margin-top: 6px;
+        color white  
+    .icon
+        width 51px
+        img
+            width 100% 
+
+.secondary-note
+    .title
+        height auto
+        max-height 60px
+    .second-title 
+        text-align center
+        color #0066b2
+        height 22px
+        overflow hiden
